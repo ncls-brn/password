@@ -1,6 +1,8 @@
-let password = document.getElementById('password');
+
+
+var password = document.getElementById('password');
 function genPassword() {
-    var chars ="1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}:<>?|ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var chars ="1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}:<>?ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var passwordLenght = 12 
     var password = ""
     for (var i = 0; i < passwordLenght; i++) {
@@ -11,9 +13,9 @@ function genPassword() {
 }
 
 function copyPassword() {
-    var copyPassword = document.getElementById('password');
+    var copytext = document.getElementById('password');
     copytext.select();
     copytext.setselectionRange(0,999);
-    document.execCommand('copy');
+    document.createRange('copy')
 }
 
